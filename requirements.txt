@@ -1,0 +1,6 @@
+django
+Pillow
+db
+mysql-connector-python
+sqlalchemy 
+pymysql
