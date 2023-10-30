@@ -38,17 +38,18 @@
                         <i class="uil-bars"></i>
                     </div>
 
-                    <div class="header_search">
-                        <input type="text" name="username" placeholder="Search for username..">&nbsp; &nbsp;
-                        <button type="submit"><i class="fa fa-search fa-1x"></i></button>
+                    <div class="header_search header_search flex flex-row">
+                        <input type="text" name="username" placeholder="Search for username.." class="flex-1 1 auto max-w-150">&nbsp; &nbsp;
+                        <button type="submit" class="flex-1 1 auto max-w-10"><i class="fa fa-search fa-1x"></i></button>
                     </div>
 
                 </div>
             </form>
             <div class="right-side lg:pr-4">
                 <!-- upload -->
-                <a href="#" class="bg-pink-500 flex font-bold hidden hover:bg-pink-600 hover:text-white inline-block items-center lg:block max-h-10 mr-4 px-4 py-2 rounded shado text-white">
-                    <ion-icon name="add-circle" class="-mb-1 mr-1 opacity-90 text-xl uilus-circle"></ion-icon> 
+                <a href="#"
+                    class="bg-pink-500 flex font-bold hidden hover:bg-pink-600 hover:text-white inline-block items-center lg:block max-h-10 mr-4 px-4 py-2 rounded shado text-white">
+                    <ion-icon name="add-circle" class="-mb-1 mr-1 opacity-90 text-xl uilus-circle"></ion-icon>
                     Upload Pics
                 </a>
                 <!-- upload dropdown box -->
@@ -131,13 +132,13 @@
                         <g fill="none">
                             <path
                                 d="M12 22a2.02 2.02 0 0 1-2.01-2h4a2.02 2.02 0 0 1-.15.78a2.042 2.042 0 0 1-1.44 1.18h-.047A1.922 1.922 0 0 1 12 22zm8-3H4v-2l2-1v-5.5a8.065 8.065 0 0 1 .924-4.06A4.654 4.654 0 0 1 10 4.18V2h4v2.18c2.579.614 4 2.858 4 6.32V16l2 1v2z"
-                                fill="currentColor" 
-                            />
+                                fill="currentColor" />
                         </g>
                     </svg>
                 </a>
                 <div uk-drop="mode: click;offset: 4" class="header_dropdown">
-                    <h4 class="-mt-5 -mx-5 bg-gradient-to-t from-gray-100 to-gray-50 border-b font-bold px-6 py-3"> Notification </h4>
+                    <h4 class="-mt-5 -mx-5 bg-gradient-to-t from-gray-100 to-gray-50 border-b font-bold px-6 py-3">
+                        Notification </h4>
                     <ul class="dropdown_scrollbar" data-simplebar>
                         <li>
                             <a href="#">
@@ -145,7 +146,7 @@
                                         alt="">
                                 </div>
                                 <div class="drop_content">
-                                    <p> 
+                                    <p>
                                         <strong class="text-link">Taiye</strong>
                                         <span class="text-link"> is following you </span>
                                     </p>
@@ -222,40 +223,46 @@
                         <div class="flex flex-1 items-center space-x-4">
                             <a href="#">
                                 <div class="bg-gradient-to-tr from-yellow-600 to-pink-600 p-0.5 rounded-full">
-                                    <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}" class="bg-gray-200 border border-white rounded-full w-8 h-8">
+                                    <img src="{% static 'assets/images/avatars/avatar-2.jpg' %}"
+                                        class="bg-gray-200 border border-white rounded-full w-8 h-8">
                                 </div>
                             </a>
-                            <span class="block font-semibold "><a href="/profile/{{post.user}}">@{{post.user}}</a></span>
+                            <span class="block font-semibold "><a
+                                    href="/profile/{{post.user}}">@{{post.user}}</a></span>
                         </div>
                         <div>
-                            <a href="#"> 
-                                <i class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 "></i>
+                            <a href="#">
+                                <i
+                                    class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 "></i>
                             </a>
                             <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100  "
                                 uk-drop="mode: hover;pos: top-right">
                                 <ul class="space-y-1">
                                     <li>
-                                        <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md ">
-                                            <i class="uil-share-alt mr-1"></i> 
+                                        <a href="#"
+                                            class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md ">
+                                            <i class="uil-share-alt mr-1"></i>
                                             Share
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md ">
-                                            <i class="uil-edit-alt mr-1"></i> 
+                                        <a href="#"
+                                            class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md ">
+                                            <i class="uil-edit-alt mr-1"></i>
                                             Edit Post
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#"
                                             class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md ">
-                                            <i class="uil-comment-slash mr-1"></i> 
+                                            <i class="uil-comment-slash mr-1"></i>
                                             Disable comments
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#"  class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md ">
-                                            <i class="uil-favorite mr-1"></i> 
+                                        <a href="#"
+                                            class="flex items-center px-3 py-2 hover:bg-gray-200 hover:text-gray-800 rounded-md ">
+                                            <i class="uil-favorite mr-1"></i>
                                             Add favorites
                                         </a>
                                     </li>
@@ -263,8 +270,9 @@
                                         <hr class="-mx-2 my-2 ">
                                     </li>
                                     <li>
-                                        <a href="#" class="flex items-center px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md ">
-                                            <i class="uil-trash-alt mr-1"></i> 
+                                        <a href="#"
+                                            class="flex items-center px-3 py-2 text-red-500 hover:bg-red-100 hover:text-red-500 rounded-md ">
+                                            <i class="uil-trash-alt mr-1"></i>
                                             Delete Post
                                         </a>
                                     </li>
@@ -317,7 +325,7 @@
                                 </svg>
                             </a>
                         </div>
-                        <div class="flex items-center space-x-3">
+                        <!-- <div class="flex items-center space-x-3">
                             <div class="flex items-center">
                                 <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt=""
                                     class="w-6 h-6 rounded-full border-2 border-white ">
@@ -332,8 +340,8 @@
                         </div>
                         <p>
                             <a href="/profile/{{post.user}}"><strong>{{post.user}}</strong></a> {{post.caption}}
-                        </p>
-                        <div class="border-t pt-4 space-y-4 ">
+                        </p> -->
+                        <!-- <div class="border-t pt-4 space-y-4 ">
                             <div class="flex">
                                 <div class="w-10 h-10 rounded-full relative flex-shrink-0">
                                     <img src="{% static 'assets/images/avatars/avatar-1.jpg' %}" alt=""
@@ -358,7 +366,7 @@
                                     <div class="absolute w-3 h-3 top-3 -left-1 bg-gray-100 transform rotate-45 "></div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="bg-gray-100 bg-gray-100 rounded-full rounded-md relative ">
                             <input type="text" placeholder="post a comment" class="bg-transparent max-h-10 shadow-none">
                             <div class="absolute bottom-0 flex h-full items-center right-0 right-3 text-xl space-x-2">
