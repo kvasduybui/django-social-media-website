@@ -1,7 +1,9 @@
 django
+whitenoise
 Pillow
 db
 mysql-connector-python
 sqlalchemy 
 pymysql
 cryptography
+gunicorn
