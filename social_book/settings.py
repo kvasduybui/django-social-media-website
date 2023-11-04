@@ -84,20 +84,30 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': '30092001',
         'HOST': 'localhost',
-        # 'HOST': '',
         'PORT': '3306',
     }
 }
 
 #Database default settings
+"""
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": "mydatabase",
+    }
+}
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": "mydatabase",
-#     }
-# }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'doan',
+        'USER': 'root',
+        'PASSWORD': '30092001',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
